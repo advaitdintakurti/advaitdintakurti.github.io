@@ -1,0 +1,83 @@
+:root {
+    --background-color: #f4f4f4;
+    --text-color: #111;
+    --text-color-light: #555;
+    --nav-border-color: #111;
+}
+
+.dark {
+    --background-color: #111;
+    --text-color: #f4f4f4;
+    --nav-border-color: #555;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 96vh;
+    width: 90%;
+    margin: 0;
+    font-family: monospace;
+    line-height: 1.6;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 18px;
+}
+
+::selection {
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
+
+textarea {
+    width: 100%;
+    min-height: 200px;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    font-family: monospace;
+    font-size: 2rem;
+    background-color: transparent;
+    color: var(--text-color);
+    resize: none;
+    appearance: none;
+    outline: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+textarea:focus,
+textarea:active,
+textarea:hover {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+span {
+    padding-right: 2em;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+}
+
+.result {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
