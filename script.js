@@ -44,11 +44,11 @@ document.getElementById('prev').addEventListener('click', () => {
 });
 
 navLinks.forEach(link => {
-  link.addEventListener('click', e => {
+  if (link.hasAttribute('data-slide')) {
     e.preventDefault();
     currentSlide = parseInt(link.getAttribute('data-slide'));
     updateCarousel();
-  });
+  }
 });
 
 indicators.forEach(indicator => {
